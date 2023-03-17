@@ -1,0 +1,53 @@
+/* Variable declarations */
+:root {
+    --color-saya-blue: #425CA9;
+}
+
+.container {
+  --fontsize: 16px;
+}
+
+/* Styles */
+body {
+  background-color: #FFFFFF;
+}
+
+h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+  font-size: var(--fontsize);
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .App{
+        width: 600px;
+        height: fit;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .App{
+        width: 768px;
+        height: fit;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .App{
+        width: 992px;
+    }
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .App{
+        width: 1440;
+    }
+}
