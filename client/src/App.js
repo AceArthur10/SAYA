@@ -1,4 +1,4 @@
-import "./App.css"
+import "./styles/login.css"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Login from './login/Login'
 import ForgotPassword from './login/forgotPassword'

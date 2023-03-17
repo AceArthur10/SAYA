@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
-import logo from 'src/assets/saya-logo.png';
+import logo from '../assets/saya-logo.png';
 
 const Login = () => {
   const [username, setUsername] = useState("")
