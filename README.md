@@ -4,6 +4,8 @@ This repository was made to help the completion of saya's webapp
 
 # How to Run:
 
+DON'T USE THESE INSTRUCTIONS 3/21/2023 -esteban 
+
 1. cd into server
 2. node server.js
 3. cd into root
