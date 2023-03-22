@@ -58,9 +58,9 @@ app.get("/notifications", (req, res) => {
       if (err) {
         throw err;
       } else {
-        res.status(200).json({
+        res.status(200).json(
             result,
-          });
+          );
       }
     });
   });

@@ -4,6 +4,7 @@ import Login from './login/Login'
 import ForgotPassword from './login/forgotPassword'
 import Register from "./login/Register";
 import Billing from "./billing/Billing-page";
+import Notifications from "./notifications/Notifications";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/ForgotPassword" element={<ForgotPassword/>} />
         <Route path="/Register" element={<Register />} />
         <Route path="/Billing" element={<Billing />} />
+        <Route path="/Notifications" element={<Notifications />} />
       </Routes>
     </Router>
     </div>
