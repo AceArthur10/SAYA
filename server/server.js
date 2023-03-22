@@ -4,9 +4,10 @@ const cors = require("cors")
 
 const app = express()
 
-app.use(express.json());
-app.use(cors());
+app.use(express.json()); //exports results to json 
+app.use(cors()); //cross resource sharing
 
+//Create Connection
 const db = mysql.createConnection({
     user: "root",
     host: "138.128.247.85",
@@ -14,6 +15,7 @@ const db = mysql.createConnection({
     database: "sys"
 })
 
+// Registration
 app.post("/register", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
@@ -26,7 +28,7 @@ app.post("/register", (req, res) => {
     })
 });
 
-
+// Login
 app.post("/login", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
@@ -46,5 +48,21 @@ app.post("/login", (req, res) => {
         }
     })
 })
+
+// Notifications
+app.get("/notifications", (req, res) => {
+    // Editable Query
+    const myQuery = "select * from notifications";
+
+    db.query(myQuery, (err, result) => {
+      if (err) {
+        throw err;
+      } else {
+        res.status(200).json({
+            result,
+          });
+      }
+    });
+  });
 
 app.listen(3001, () => {console.log("Server started on port 3001")})
