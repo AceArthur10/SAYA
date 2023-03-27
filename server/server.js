@@ -45,6 +45,18 @@ app.post("/login", (req, res) => {
             res.send({message: "Wrong username/password"})
         }
     })
+});
+
+app.post("/settings", (req, res) => {
+    const { code, phone, account_name, invoice, first_name, last, password } = req.body;
+
+    db.query(
+        "UPDATE test_users SET country_code = ?, phone_number = ?, account_name = ?, invoice_name_prefix = ?, first_name = ?, last_name = ?, password = ? WHERE id = 1",
+        [code, phone, account_name, invoice, first_name, last, password],
+        (err, result) => {
+        console.log(err);
+    })
+
 })
 
 app.listen(3001, () => {console.log("Server started on port 3001")})
