@@ -1,6 +1,6 @@
 # SAYA
 
-Updated 12:28pm 3/21/2023 -EA
+Readme updated 12:28pm 3/21/2023 -EA
 
 # How to Run:
 
