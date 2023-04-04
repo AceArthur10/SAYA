@@ -58,11 +58,42 @@ app.get("/notifications", (req, res) => {
       if (err) {
         throw err;
       } else {
-        res.status(200).json(
+        res.json(
             result,
           );
       }
     });
   });
+
+
+//Tenants
+//sending'connecting data from front end to back
+app.post('/create',(req,res) =>{
+    const tenant = req.body.tenant
+    const unit = req.body.unit
+    const meter_number = req.body.meter_number
+    const email = req.body.email
+// Setting up our query for adding a new tenant...might not need/ is not needed currently
+    db.query('INSERT INTO tenants (tenant, unit, meter_number, email) VALUES(?,?,?,?)',
+    [tenant,unit,meter_number,email], 
+    (err,result) =>{
+        if (err){
+            console.log(err)
+        }else{
+            res.send("Values inserted correctly")
+        }
+    });
+
+});
+
+app.get('/tenants', (req, res) =>{
+    db.query("SELECT * FROM tenants", (err,result)=>{
+        if(err){
+            console.log(err);
+        }else{
+            res.send(result);
+        };
+    });
+})
 
 app.listen(3001, () => {console.log("Server started on port 3001")})
