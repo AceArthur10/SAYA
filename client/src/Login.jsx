@@ -1,26 +1,32 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
-import logo from './saya-logo.png';
+import logo from './Styles/saya-logo.png';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from "./AuthContext";
 
 const Login = () => {
-  const [username, setUsername] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginStatus, setLoginStatus] = useState("");
 
-  const [loginStatus, setLoginStatus] = useState("")
+  const navigate = useNavigate();
 
-    const login = () => {
-      Axios.post("http://localhost:3001/login",
-      {
-        username: username,
-        password: password,
-      }).then((response)=> {
-        if(response.data.message){
-          setLoginStatus(response.data.message)
-        } else{
-          setLoginStatus(response.data[0].username)
-        }
-      })
-    }
+  const { setAuthInfo } = useContext(AuthContext);
+
+  const login = () => {
+    Axios.post("http://localhost:3001/login", {
+      email: email,
+      password: password,
+    }).then((response) => {
+      if (response.data.message) {
+        setLoginStatus(alert("Incorrect email or password!"));
+      } else {
+        setAuthInfo({ isAuthenticated: true, userId: response.data[0].id });
+        navigate("/Dashboard");
+      }
+    });
+  };
 
   return (
     <div className="background">
@@ -55,8 +61,4 @@ const Login = () => {
       </div>
   )};
 
-
 export default Login;
-
-
-
