@@ -26,7 +26,6 @@ app.post("/register", (req, res) => {
     })
 });
 
-
 app.post("/login", (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
@@ -38,7 +37,7 @@ app.post("/login", (req, res) => {
         if(err){
             res.send({err: err})
         }
-
+        //if login credentials match, sends the result and logs in user
         if (result.length > 0) {
             res.send(result)
         } else{
