@@ -1,0 +1,13 @@
+.box{
+    position: absolute;
+height: 514px;
+left: 237px;
+right: 71px;
+top: 875px;
+background: #FFFFFF;
+/* grayscale / divider */
+
+border: 1px solid #DFE0EB;
+border-radius: 8px;
+}
+
