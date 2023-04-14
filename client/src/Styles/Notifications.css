@@ -1,0 +1,56 @@
+.bord{
+    position: absolute;
+    height: 651px;
+    left: 220px;
+    right: 624px;
+    top: 158px;
+    
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+    border-radius: 15.4px;
+
+    background: #FFFFFF;
+/* grayscale / divider */
+
+border: 1px solid #DFE0EB;
+border-radius: 8px;
+}
+
+.Noti{
+    position: absolute;
+height: 24px;
+left: 32px;
+right: 178px;
+top: 32px;
+
+/* Bold/19px */
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 19px;
+line-height: 24px;
+/* identical to box height */
+
+letter-spacing: 0.4px;
+
+/* grayscale / black */
+
+color: #252733;
+}
+
+.See{
+    position: absolute;
+width: 84px;
+height: 18px;
+right: 32px;
+top: 37px;
+text-decoration: none;
+
+}
+
+.ground{
+width: 1440px;
+height: 1421px;
+
+background: #FFFFFF;
+}
