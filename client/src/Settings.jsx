@@ -22,8 +22,8 @@ const Settings = ({ userId }) => {
             return;
         }
         if (password !== confirmPassword) {
-          alert("Password and confirm password do not match.");
-          return;
+            alert("Password and confirm password do not match.");
+            return;
         }
         Axios.post("http://localhost:3001/settings", {
           userId,
@@ -49,6 +49,7 @@ const Settings = ({ userId }) => {
       }
 
       return (
+        //put className='back' to make the background white
         <div>
             <form onSubmit={update}>
             <h1 className='Info'>Update Account Information</h1>
