@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider, AuthContext } from "./AuthContext";
 import Login from "./Login";
 import ForgotPassword from "./ForgotPassword";
-import Register from "./Register";
 import Dashboard from "./Dashboard";
 import Settings from "./Settings";
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
+import Analytics from "./Analytics";
+import Notifications from "./Notifications";
+import QuickActions from "./QuickActions";
 
 function App() {
   return (
@@ -28,7 +30,8 @@ const RoutesComponent = () => {
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/ForgotPassword" element={<ForgotPassword />} />
-      <Route path="/Register" element={<Register />} />
+      {/* <Route path="*" element={<Navigate to="/" />}/> */}
+
       <Route
         path="/Dashboard"
         element={
@@ -49,8 +52,39 @@ const RoutesComponent = () => {
           )
         }
       />
+      <Route
+        path="/Analytics"
+        element={
+          isAuthenticated ? (
+            <Analytics />
+          ) : (
+            <Navigate to="/" replace />
+          )
+        }
+      />
+      <Route
+        path="/Notifications"
+        element={
+          isAuthenticated ? (
+            <Notifications />
+          ) : (
+            <Navigate to="/" replace />
+          )
+        }
+      />
+      <Route
+        path="/Customize"
+        element={
+          isAuthenticated ? (
+            <QuickActions />
+          ) : (
+            <Navigate to="/" replace />
+          )
+        }
+      />
     </Routes>
   );
 };
+
 
 export default App;
