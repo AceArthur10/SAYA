@@ -1,0 +1,59 @@
+.react-calendar {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 28.8696px;
+gap: 11.55px;
+
+position: absolute;
+width: 487px;
+height: 478.27px;
+left: 882px;
+top: 331px;
+
+background: #FFFFFF;
+box-shadow: 0px 3.84928px 19.2464px rgba(0, 0, 0, 0.07), 0px 4px 32.1627px rgba(0, 0, 0, 0.0503198), 0px 21.4947px 17.1957px rgba(0, 0, 0, 0.0417275), 0px 12.0497px 9.63979px rgba(0, 0, 0, 0.035), 0px 6.39952px 5.11962px rgba(0, 0, 0, 0.0282725), 0px 2.66299px 2.13039px rgba(0, 0, 0, 0.0196802);
+border-radius: 15.3971px;
+}
+.react-calendar__tile--active {
+    background: #006edc;
+    color: white;
+}
+.react-calendar__tile--now {
+    background: #425CA9;
+}
+.react-calendar__month-view__days__day--weekend {
+    color: #000000;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+    color: #000000;
+}
+
+.dashboard{
+    position: absolute;
+    height: 48px;
+    left: 220px;
+    right: 47px;
+    top: 53px;
+    
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.3px;
+    
+    /* grayscale / black */
+    
+    color: #252733;
+    
+    backdrop-filter: blur(2.5px);
+    /* Note: backdrop-filter has minimal browser support */
+}
+
+.back{
+width: 1440px;
+height: 1421px;
+
+background: #FFFFFF;
+}

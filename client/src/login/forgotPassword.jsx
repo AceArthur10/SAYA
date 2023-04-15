@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import "./forgotPassword.css";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -10,14 +11,15 @@ function ForgotPassword() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Code to send email to user goes here
-    setMessage(`An email has been sent to ${email} with instructions on how to reset your password.`);
+    setMessage(
+      `An email has been sent to ${email} with instructions on how to reset your password.`
+    );
     setEmail("");
   };
 
   const backToLogin = () => {
-    navigate("/")
-
-  }
+    navigate("/");
+  };
   return (
     <div>
       <h2>Forgot Password</h2>
@@ -39,18 +41,4 @@ function ForgotPassword() {
   );
 }
 
-
-
-
 export default ForgotPassword;
-
-
-
-
-
-
-
-
-
-
-

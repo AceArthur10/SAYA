@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Axios from "axios";
+import "./Tenants.css";
 
 function Tenants() {
   // Creating useState for database... need to add fucntionality for last button

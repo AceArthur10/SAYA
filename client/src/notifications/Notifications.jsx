@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import Axios from "axios";
 import { useEffect, useState } from "react";
+import "./Notifications.css";
 
 function Notifications() {
   const [notificationList, setNotificationList] = useState([]);
@@ -39,7 +41,7 @@ function Notifications() {
 
   return (
     <div className="tenants">
-      <button onClick={getNotifications}>Show Notis Babe</button>
+      <button onClick={getNotifications}>Show Notifications</button>
       <table style={{ borderCollapse: "collapse", border: "1px solid black" }}>
         <thead>
           <tr>
