@@ -1,0 +1,156 @@
+.sidebar {
+  position: absolute;
+  width: 177px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  height: 1450px;
+
+  background-color: black;
+  }
+  
+.saya{
+  position: absolute;
+width: 130px;
+height: 98px;
+left: 23px;
+top: 14px;
+
+background: url(saya.png);
+}
+
+  .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin-bottom: 10px;
+  }
+  
+  .nav li a {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+letter-spacing: 0.2px;
+
+/* sidebar / gray */
+
+color: #A4A6B3;
+  }
+  
+
+
+  .Overview{
+    position: absolute;
+    top: 128px;
+    /* identical to box height */
+
+    letter-spacing: 0.2px;
+    height: 20px;
+    left: 42px;
+    right: 54px;  
+  }
+
+  .Tenants{
+    position: absolute;
+    height: 50px;
+    left: 1px;
+    top: 194px;
+    letter-spacing: 0.2px;
+    height: 20px;
+    left: 42px;
+    right: 54px; 
+  }
+
+  .Billing{
+    position: absolute;
+    height: 50px;
+    left: 0px;
+    top: 246px;
+    letter-spacing: 0.2px;
+    height: 20px;
+    left: 42px;
+    right: 54px; 
+
+  }
+
+  .Analytics{
+    position: absolute;
+    height: 50px;
+    left: -1px;
+    top: 296px;
+    letter-spacing: 0.2px;
+    height: 20px;
+    left: 42px;
+    right: 54px; 
+  }
+
+  .Hardware{
+    position: absolute;
+    height: 48px;
+    left: 1px;
+    top: 346px;
+    letter-spacing: 0.2px;
+    height: 20px;
+    left: 42px;
+    right: 54px; 
+  }
+
+  .Notifications{
+    position: absolute;
+    height: 55px;
+    left: 3px;
+    top: 394px;
+    letter-spacing: 0.2px;
+    height: 20px;
+    left: 42px;
+    right: 54px; 
+  }
+
+.Settings{
+  position: absolute;
+  height: 55px;
+  left: 0px;
+  top: 485px;
+  letter-spacing: 0.2px;
+  height: 20px;
+  left: 42px;
+  right: 54px; 
+
+}
+
+.Logout{
+  position: absolute;
+  height: 55px;
+  left: 1px;
+  top: 536px;
+  letter-spacing: 0.2px;
+  height: 20px;
+  left: 42px;
+  right: 54px; 
+  color: #A4A6B3;
+}
+
+.solid{
+  position: absolute;
+  height: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 985px;
+
+/* grayscale / divider */
+
+  border: 1px solid #424243;
+}
+
+  

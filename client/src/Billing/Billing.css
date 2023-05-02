@@ -1,0 +1,82 @@
+.overview{
+    position: absolute;
+height: 44px;
+left: 228px;
+right: 90px;
+top: 41px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: 0.3px;
+
+/* grayscale / black */
+
+color: #252733;
+}
+
+.billNoti{
+    position: absolute;
+    height: 324px;
+    left: 228px;
+    right: 684px;
+    top: 105px;
+
+    box-sizing: border-box;
+
+/* grayscale / white */
+
+background: #FFFFFF;
+/* grayscale / divider */
+
+border: 1px solid #DFE0EB;
+border-radius: 8px;
+    
+}
+
+.tenants{
+    position: absolute;
+    width: 1121px;
+    height: 322px;
+    left: 228px;
+    top: 632px;
+    
+
+}
+
+.BillingH{
+    position: absolute;
+height: 44px;
+left: 228px;
+right: 90px;
+top: 463px;
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: 0.3px;
+
+/* grayscale / black */
+
+color: #252733;
+
+}
+
+.Searching{
+    position: absolute;
+width: 479.94px;
+height: 78px;
+left: 228px;
+top: 526px;
+}
+
+.SearchH{
+    position: absolute;
+width: 430.07px;
+height: 43px;
+left: 228px;
+top: 561px;
+}

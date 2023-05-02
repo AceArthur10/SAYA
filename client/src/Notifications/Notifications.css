@@ -1,0 +1,200 @@
+.bord{
+    position: absolute;
+    height: 651px;
+    left: 220px;
+    right: 624px;
+    top: 158px;
+    
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+    border-radius: 15.4px;
+
+    background: #FFFFFF;
+/* grayscale / divider */
+
+border: 1px solid #DFE0EB;
+border-radius: 8px;
+}
+
+.Noti{
+    position: absolute;
+height: 24px;
+left: 32px;
+right: 178px;
+top: 32px;
+
+/* Bold/19px */
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 19px;
+line-height: 24px;
+/* identical to box height */
+
+letter-spacing: 0.4px;
+
+/* grayscale / black */
+
+color: #252733;
+}
+
+.See{
+    position: absolute;
+width: 84px;
+height: 18px;
+right: 32px;
+top: 37px;
+text-decoration: none;
+
+}
+
+.ground{
+width: 1440px;
+height: 1421px;
+
+background: #FFFFFF;
+}
+
+.notiTable{
+    position: absolute;
+    width: 1054.28px;
+    height: 323px;
+    left: 200px;
+    top: 444px;
+    
+}
+
+.NotiManager{
+    position: absolute;
+    height: 44px;
+    left: 213px;
+    right: 404px;
+    top: 68px;
+    font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: 0.3px;
+
+/* grayscale / black */
+
+color: #252733;
+}
+
+.CreateNew{
+    position: absolute;
+width: 258px;
+height: 50px;
+left: 220px;
+top: 145px;
+
+border: 1.9294px solid #425CA9;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 9.90423px;
+}
+
+.Enabled{
+    position: absolute;
+width: 303px;
+height: 50px;
+left: 509px;
+top: 144px;
+
+border: 1.9294px solid #425CA9;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 9.90423px;
+}
+
+.NotiHistory{
+    position: absolute;
+height: 44px;
+left: 213px;
+right: 404px;
+top: 210px;
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 31px;
+letter-spacing: 0.3px;
+
+/* grayscale / black */
+
+color: #252733;
+}
+
+.SearchBy{
+    box-sizing: border-box;
+
+position: absolute;
+width: 458px;
+height: 43px;
+left: 213px;
+top: 296px;
+
+border: 1px solid #6F6F6F;
+border-radius: 10px;
+}
+
+.FromDate{
+    box-sizing: border-box;
+
+position: absolute;
+width: 217px;
+height: 43px;
+left: 684px;
+top: 295px;
+
+border: 1px solid #6F6F6F;
+border-radius: 10px;
+}
+
+.Search{
+    position: absolute;
+    width: 346px;
+    height: 16px;
+    left: 225px;
+    top: 269px;
+    
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    
+    color: #6F6F6F;
+}
+
+.ToDate{
+    position: absolute;
+    width: 277.35px;
+    height: 15.81px;
+    left: 924px;
+    top: 269px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    
+    color: #6F6F6F;
+}
+.DateTo{
+    box-sizing: border-box;
+
+position: absolute;
+width: 260px;
+height: 43px;
+left: 914px;
+top: 295px;
+
+border: 1px solid #6F6F6F;
+border-radius: 10px;
+}

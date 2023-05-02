@@ -1,0 +1,31 @@
+.landlord{
+left: 228px;
+right: 90px;
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: 0.3px;
+
+/* grayscale / black */
+
+color: #252733;
+
+}
+
+.hardware{
+    position: absolute;
+    height: 651px;
+    left: 220px;
+    right: 624px;
+}
+
+.HTables{
+    width: 1151px;
+    height: 323px;
+    left: 228px;
+    top: 266px;
+}
+
+
