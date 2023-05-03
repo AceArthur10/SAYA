@@ -3,6 +3,9 @@ import Axios from "axios";
 import "./Tenants.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { useEffect } from "react";
+import edit from "../assets/pencil.png";
+import searchIcon from "../assets/Search-Icon.png";
+import openDetails from "../assets/upper-right-arrow-square-button-outlined-symbol.png";
 
 function Tenants() {
   // Creating useState for database... need to add fucntionality for last button
@@ -30,12 +33,12 @@ function Tenants() {
       ]);
     });
   };
-    useEffect(() => {
-      Axios.get("http://localhost:3001/tenants").then((response) => {
-        setTenantList(response.data);
-      });
-    }, []);
-  
+  useEffect(() => {
+    Axios.get("http://localhost:3001/tenants").then((response) => {
+      setTenantList(response.data);
+    });
+  }, []);
+
   // Test for console log to make sure we're getting data
   //const displayInfo = () => {
   //console.log(tenant + unit + meterNumber + email);
@@ -43,73 +46,104 @@ function Tenants() {
 
   return (
     // Initializing headers and labels
-    <div className="App">
-      <Sidebar/>
+    <div className="availableScreen">
+      <Sidebar />
+      <label className="overview">Tenants Overview</label>
+      <label className="addTenantsTitle">Add New Tenant</label>
       <div className="information">
-        <label>Tenant:</label>
+        <label>Tenant: </label>
         <input
           type="text"
+          className="inputSearchBarTenant"
+          placeholder="Full Name"
           onChange={(event) => {
             setTenant(event.target.value);
           }}
         />
 
-        <label>Unit:</label>
+        <label> Unit: </label>
         <input
           type="text"
+          className="inputSearchBarTenant"
+          placeholder="ex. 24"
           onChange={(event) => {
             setUnit(event.target.value);
           }}
         />
 
-        <label>Meter Number:</label>
+        <label>  Meter Number: </label>
         <input
           type="text"
+          className="inputSearchBarTenant"
+          placeholder="ex. WHG223F"
           onChange={(event) => {
             setMeterNumber(event.target.value);
           }}
         />
 
-        <label>EMAIL:</label>
+        <label> Email: </label>
         <input
           type="text"
+          className="inputSearchBarTenant"
+          placeholder="Valid Email"
           onChange={(event) => {
             setEmail(event.target.value);
           }}
         />
 
-        <label>NSWTIY:</label>
-        <input type="button" className="addTen"/>
-        <button onClick={addTenant}>Add New Tenant</button>
+        {/* <label>NSWTIY:</label>
+        <input type="button" className="addTen" /> */}
+        <button onClick={addTenant} className="newTenantButton">Add New Tenant</button>
       </div>
 
       <div className="tenants">
-        <table
-          style={{ borderCollapse: "collapse", border: "1px solid black" } }className="tenTable"
-        >
-          <thead>
-            <tr>
-              <th style={{ border: "1px solid black" }}>Tenant Name</th>
-              <th style={{ border: "1px solid black" }}>Unit</th>
-              <th style={{ border: "1px solid black" }}>Meter Number</th>
-              <th style={{ border: "1px solid black" }}>Email</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tenantList.map((val, key) => {
-              return (
-                <tr key={key}>
-                  <td style={{ border: "1px solid black" }}>{val.tenant}</td>
-                  <td style={{ border: "1px solid black" }}>{val.unit}</td>
-                  <td style={{ border: "1px solid black" }}>
-                    {val.meter_number}
-                  </td>
-                  <td style={{ border: "1px solid black" }}>{val.email}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <div className="viewTenantsTitle">View Tenants</div>
+        <div className="searchingTenantText">Search (Minimum 3 Letters)</div>
+        <input
+        type="name"
+        id="name"
+        value={tenant}
+        className="searchTenantBar"
+        placeholder='Search by Name or Invoice Number'
+        onChange={(event) => setTenant(event.target.value)}
+        required
+      />
+      <a href="/" target="_blank" rel="noreferrer">
+        <img src={searchIcon} alt="Search Icon" className="searchTenantIcon"></img>
+      </a>
+        <div className="tenTable">
+          <table>
+            <thead>
+              <tr>
+                <th>Tenant Name</th>
+                <th>Unit</th>
+                <th>Meter Number</th>
+                <th>Email</th>
+                <th>Options</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tenantList.map((val, key) => {
+                return (
+                  <tr key={key}>
+                    <td>{val.tenant}</td>
+                    <td>{val.unit}</td>
+                    <td>{val.meter_number}</td>
+                    <td>{val.email}</td>
+                    <td style={{ textAlign: "right", justifyContent: "space-evenly", display: "flex", paddingTop: "18px" }}>
+                      <a href="/" target="_blank" rel="noreferrer">
+                        <img src={edit} alt="Edit Icon" className="imageIconResize"></img>
+                      </a>
+                      <a href="/" target="_blank" rel="noreferrer">
+                        <img src={openDetails} alt="Open Details Icom" className="imageIconResize"></img>
+                      </a>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

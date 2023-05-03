@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/saya-logo.png';
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -19,22 +20,33 @@ function ForgotPassword() {
 
   }
   return (
-    <div>
-      <h2>Forgot Password</h2>
-      {message && <p>{message}</p>}
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          required
-        />
-        <button type="submit">Send Email</button>
-        <p></p>
-        <button onClick={backToLogin}>Back to Login</button>
-      </form>
+    <div className="backgroundLogin">
+      <div className='card'>
+        <div className="container">
+          <img src={logo} alt="Logo" className="logo" />
+          <p></p>
+          <label className="portal">Saya.Life Portal</label>
+          <label className="title">Reset Your Password</label>
+          <label className="enter">Fill with your email to receive instructions on how to reset your password</label>
+          {message && <p>{message}</p>}
+          <div className="email">
+            <form onSubmit={handleSubmit}>
+              <label className="emailText" htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                value={email}
+                className="emailIn"
+                placeholder=' Email address'
+                onChange={(event) => setEmail(event.target.value)}
+                required
+              />
+              <button type="submit" className='sendLoginEmailButton'>Send Email</button>
+            </form>
+          </div>
+          <button onClick={backToLogin} className="returnToLogin">Return to Login</button>
+        </div>
+      </div>
     </div>
   );
 }

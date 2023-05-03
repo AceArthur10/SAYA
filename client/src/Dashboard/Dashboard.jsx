@@ -9,10 +9,10 @@ import { Link } from 'react-router-dom';
 import ChartComponent from '../Analytics/ChartComponent';
 
 const Dashboard = ({ userId }) => {
-    const [date, setDate] = React.useState(new Date());
-    const [userData, setUserData] = useState({});
+  const [date, setDate] = React.useState(new Date());
+  const [userData, setUserData] = useState({});
 
-    useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/user/${userId}`);
@@ -25,26 +25,25 @@ const Dashboard = ({ userId }) => {
     fetchData();
   }, [userId]);
 
-    const onChange = (newDate) => {
-      setDate(newDate);
-    };
+  const onChange = (newDate) => {
+    setDate(newDate);
+  };
 
-    return (
+  return (
     //put className='back' to make the background white
-    <div>
+    <div className="availableScreen">
       <h1 className='dashboard'>{`Welcome ${userData.account_name}`}</h1>
       <Calendar onChange={onChange} value={date} />
-      <div className='bord'>
-      <label className='Noti'>Notifications</label>
-      <Link to="/Notifications" className='See'>See All</Link>
+      <div className='notificationBoard'>
+        <label className='Noti'>Notifications</label>
+        <Link to="/Notifications" className='See'>See All</Link>
       </div>
-      <Sidebar/>
-      <QuickActions/>
+      <Sidebar />
+      <QuickActions />
       <div className='analyticsBord'>
-        <ChartComponent/>
+        <ChartComponent />
       </div>
     </div>
-    
   );
 };
 

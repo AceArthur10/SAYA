@@ -1,23 +1,4 @@
-.overview{
-    position: absolute;
-height: 44px;
-left: 228px;
-right: 90px;
-top: 41px;
-
-font-family: 'Mulish';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 40px;
-letter-spacing: 0.3px;
-
-/* grayscale / black */
-
-color: #252733;
-}
-
-.billNoti{
+.billNoti {
     position: absolute;
     height: 324px;
     left: 228px;
@@ -26,57 +7,72 @@ color: #252733;
 
     box-sizing: border-box;
 
-/* grayscale / white */
+    /* grayscale / white */
 
-background: #FFFFFF;
-/* grayscale / divider */
+    background: #FFFFFF;
+    /* grayscale / divider */
 
-border: 1px solid #DFE0EB;
-border-radius: 8px;
-    
+    border: 1px solid #DFE0EB;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15.4px;
+
 }
 
-.tenants{
+.tenantsBoard {
     position: absolute;
-    width: 1121px;
+    width: 75vw;
     height: 322px;
     left: 228px;
     top: 632px;
-    
+}
+
+.BillingH {
+    position: absolute;
+    height: 44px;
+    left: 228px;
+    right: 90px;
+    top: 463px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 0.3px;
+
+    /* grayscale / black */
+
+    color: #252733;
 
 }
 
-.BillingH{
+.Searching {
     position: absolute;
-height: 44px;
-left: 228px;
-right: 90px;
-top: 463px;
-font-family: 'Mulish';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 40px;
-letter-spacing: 0.3px;
-
-/* grayscale / black */
-
-color: #252733;
-
+    width: 479.94px;
+    height: 78px;
+    left: 228px;
+    top: 526px;
 }
 
-.Searching{
+.SearchH {
     position: absolute;
-width: 479.94px;
-height: 78px;
-left: 228px;
-top: 526px;
+    width: 430.07px;
+    height: 43px;
+    left: 228px;
+    top: 561px;
+
+    box-sizing: border-box;
+    /* grayscale / extra light */
+    background: #f3f3f3;
+    /* grayscale / gray lightest */
+    border: 1px solid #F0F1F7;
+    border-radius: 8px;
+    padding-left: 8px;
 }
 
-.SearchH{
+.searchBillingIcon {
     position: absolute;
-width: 430.07px;
-height: 43px;
-left: 228px;
-top: 561px;
+    height: 40px;
+
+    top: 561px;
+    left: 665px;
 }

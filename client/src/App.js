@@ -1,4 +1,3 @@
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider, AuthContext } from "./AuthContext";
 import Login from "./Login/Login";
@@ -13,6 +12,7 @@ import QuickActions from "./Dashboard/QuickActions";
 import Billing from "./Billing/Billing";
 import Hardware from "./Hardware/Hardware";
 import Tenants from "./Tenants/Tenants";
+import "./App.css"
 
 function App() {
   return (

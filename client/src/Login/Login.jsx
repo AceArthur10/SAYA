@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Axios from 'axios';
-import logo from './saya-logo.png';
+import logo from '../assets/saya-logo.png';
 import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from "../AuthContext";
 import { Link } from 'react-router-dom';
+import "./Login.css";
 
 const Login = () => {
   const [email, setUsername] = useState("");
@@ -29,35 +30,40 @@ const Login = () => {
   };
 
   return (
-    <div className="background">
-      <div className='card'>
-      <div className="container">
-      <img src={logo} alt="Logo" className="logo" />
-      {/* <a href="/Register">Register</a> */}
+    <div className="backgroundLogin">
+      <div className="card">
+        <div className="container">
 
-      <label className="portal">Saya.Life Portal</label>
-      <label className="welcome">Welcome to Saya.Life</label>
-      <label className="enter">Enter your email and password below</label>
+          <img src={logo} alt="Logo" className="logo" />
+          {/* <a href="/Register">Register</a> */}
 
-      <div className="pass">
-      <label name="password" className="password">PASSWORD</label>
-      <input type="password" placeholder='Password' className="passIn"
-      onChange={(e) => {setPassword(e.target.value)}}/>
-      </div>
+          <label className="portal">SAYA.life Portal</label>
+          <label className="title">Welcome to SAYA.life</label>
+          <label className="enter">Enter your email and password below</label>
 
-      <div className="email">
-      <label name="Email" className="emailText">EMAIL</label>
-      <input type='text' placeholder='Email address' className="emailIn"
-      onChange={(e) => {setUsername(e.target.value)}}/>
-      </div>
+          <div className="email">
+            <label name="Email" className="emailText">EMAIL</label>
+            <input type='text' placeholder='Email Address' className="emailIn"
+              onChange={(e) => { setUsername(e.target.value) }} />
+          </div>
 
-      <button onClick={login} className="button">Log In</button>
+          <div className="pass">
+            <label name="password" className="password">PASSWORD</label>
+            <input type="password" placeholder='Password' className="passIn"
+              onChange={(e) => { setPassword(e.target.value) }} />
+          </div>
 
-      </div>
-      <Link to="/ForgotPassword" className='forgot'>Forgot Password</Link>
+          <button onClick={ login } className="loginButton">Log In</button>
+
+          <div>
+            <Link to="/ForgotPassword" className='forgot'>Forgot Password</Link>
+          </div>
+
+        </div>
       </div>
       <h1> {loginStatus}</h1>
-      </div>
-  )};
+    </div>
+  )
+};
 
 export default Login;

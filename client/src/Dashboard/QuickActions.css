@@ -1,65 +1,74 @@
-.border{
+.border {
     position: absolute;
-    height: 152.92px;
-    left: 882px;
-    right: 68px;
+    height: 190px;
+    width: 35vw;
+    left: 60vw;
     top: 158px;
-    
-    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
-    border-radius: 12.6611px;
-    box-sizing: border-box;
-    border: 0.822148px solid #DFE0EB;
-    border-radius: 6.57718px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15.4px;
+    border-color: #FFFFFF;
+}
+
+.quick-action-button {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: bold;
     background: #FFFFFF;
-    
-
+    border: 0px;
 }
 
-.Quick{
-    position: absolute;
-height: 16.44px;
-left: 25.49px;
-right: 147.16px;
-top: 14.8px;
+.Quick {
+    position: relative;
+    height: 16.44px;
+    left: 25.49px;
+    right: 147.16px;
+    top: 2rem;
 
-font-family: 'Mulish';
-font-style: normal;
-font-weight: 700;
-font-size: 15.6208px;
-line-height: 20px;
-letter-spacing: 0.328859px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 20px;
+    letter-spacing: 0.328859px;
 
-/* grayscale / black */
+    /* grayscale / black */
 
-color: #252733;
+    color: #252733;
 }
 
-.customize{
+.customize {
     position: absolute;
     height: 16.44px;
     left: 397.92px;
-right: 18.09px;
-top: calc(52% - 17px/2 - 53.16px);
+    right: 18.09px;
+    top: calc(52% - 17px/2 - 53.16px);
 
-font-family: 'Mulish';
-font-style: normal;
-font-weight: 600;
-font-size: 11.5101px;
-line-height: 16px;
-/* identical to box height, or 143% */
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11.5101px;
+    line-height: 16px;
+    /* identical to box height, or 143% */
 
-text-align: right;
-letter-spacing: 0.16443px;
+    text-align: right;
+    letter-spacing: 0.16443px;
 
-/* Main/Blue */
+    /* Main/Blue */
 
-color: #3751FF;
-text-decoration: none;
+    color: #3751FF;
+    text-decoration: none;
 
 
 }
-.buttons{
-    position: absolute;
-top: 55.91px;
+
+.buttons {
+    position: relative;
+    top: 25%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
+.quickActionIcon {
+    height: 50px;
+}

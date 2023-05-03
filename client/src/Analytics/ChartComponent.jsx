@@ -57,7 +57,7 @@ const ChartComponent = () => {
     <>
       {chartData.datasets.length > 0 ? (
         <div className="barChart">
-        <h1>Saya Analytics</h1>
+        <h1>SAYA Analytics</h1>
           <Bar options={chartOptions} data={chartData} />
         </div>
       ) : (

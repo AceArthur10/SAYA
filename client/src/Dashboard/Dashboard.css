@@ -1,77 +1,84 @@
 .react-calendar {
     display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 28.8696px;
-gap: 11.55px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28.8696px;
+    gap: 11.55px;
 
-position: absolute;
-width: 487px;
-height: 478.27px;
-left: 882px;
-top: 331px;
+    position: absolute;
+    width: 35vw;
+    height: 408px;
+    left: 60vw;
+    top: 20em;
 
-background: #FFFFFF;
-box-shadow: 0px 3.84928px 19.2464px rgba(0, 0, 0, 0.07), 0px 4px 32.1627px rgba(0, 0, 0, 0.0503198), 0px 21.4947px 17.1957px rgba(0, 0, 0, 0.0417275), 0px 12.0497px 9.63979px rgba(0, 0, 0, 0.035), 0px 6.39952px 5.11962px rgba(0, 0, 0, 0.0282725), 0px 2.66299px 2.13039px rgba(0, 0, 0, 0.0196802);
-border-radius: 15.3971px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15.4px;
 }
+
 .react-calendar__tile--active {
     background: #006edc;
     color: white;
 }
+
 .react-calendar__tile--now {
     background: #425CA9;
 }
+
 .react-calendar__month-view__days__day--weekend {
     color: #000000;
 }
+
 .react-calendar__month-view__days__day--neighboringMonth {
     color: #000000;
 }
 
-.dashboard{
+.dashboard {
     position: absolute;
     height: 48px;
     left: 220px;
     right: 47px;
     top: 53px;
-    
-    font-family: 'Mulish';
-    font-style: normal;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 45px;
     letter-spacing: 0.3px;
-    
+
     /* grayscale / black */
-    
+
     color: #252733;
-    
+
     backdrop-filter: blur(2.5px);
     /* Note: backdrop-filter has minimal browser support */
 }
 
-.back{
-width: 1440px;
-height: 1421px;
+.back {
+    width: 1440px;
+    height: 1421px;
 
-background: #FFFFFF;
+    background: #FFFFFF;
 }
 
-.analyticsBord{
+.analyticsBord {
     position: absolute;
-height: 514px;
-left: 237px;
-right: 71px;    
-top: 875px;
-box-sizing: border-box;
+    width: 80vw;
+    left: 228px;
+    right: 71px;
+    top: 875px;
+    box-sizing: border-box;
 
-/* grayscale / white */
+    /* grayscale / white */
 
-background: #FFFFFF;
-/* grayscale / divider */
+    background: #FFFFFF;
+    /* grayscale / divider */
 
-border: 1px solid #DFE0EB;
-border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15.4px;
+    margin-bottom: 100px;
 }
-

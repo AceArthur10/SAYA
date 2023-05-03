@@ -3,6 +3,7 @@ import { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import "./Notifications.css";
 import { useEffect } from "react";
+import searchIcon from "../assets/Search-Icon.png"
 
 function Notifications() {
   const [notificationList, setNotificationList] = useState([]);
@@ -41,51 +42,55 @@ function Notifications() {
   }, []);
 
   return (
-    <div>
-    <Sidebar/>
-    <label className="NotiManager">Notification Mangager</label> 
-    <button className="CreateNew">Create new Notification</button>
-    <button className="Enabled">Notifications Enabled?</button>
-    <label className="NotiHistory">Notification History</label>
-    <label className="Search">Search (Enter minimum 3 letters)</label>
-    <label className="ToDate">To Date</label>
+    <div className="availableScreen">
+      <Sidebar />
+      <label className="overview">Notification Mangager |</label>
+      <label className="notificationButtonStatus">Status: On</label>
+      <button className="CreateNew">Create New Notification</button>
+      <div className="switchButton">
+        <p>Notifications Enabled?</p>
+        <label class="switch">
+          <input type="checkbox"></input>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <label className="NotiHistory">Notification History</label>
+      <label className="Search">Search (Enter minimum 3 letters)</label>
+      <label className="ToDate">To Date</label>
 
-    <input type="text" className="SearchBy" placeholder="Search by Gateway or Meter"></input>
-    <input type="text" className="FromDate" placeholder="From Date"></input>
-    <input type="text" className="DateTo"></input>
+      <input type="text" className="SearchBy" placeholder="Search by Gateway or Meter"></input>
+      <input type="text" className="FromDate" placeholder="From Date"></input>
+      <input type="text" className="DateTo" placeholder="End Date"></input>
+      <a href="/" target="_blank" rel="noreferrer">
+        <img src={searchIcon} alt="Search Icon" className="searchNotificationIcon"></img>
+      </a>
 
-    <div >
-      <table style={{ borderCollapse: "collapse", border: "1px solid black" }}className="notiTable">
-        <thead>
-          <tr>
-            <th style={{ border: "1px solid black" }}>Meter Num</th>
-            <th style={{ border: "1px solid black" }}>Message</th>
-            <th style={{ border: "1px solid black" }}>unit num</th>
-            <th style={{ border: "1px solid black" }}>noti type</th>
-            <th style={{ border: "1px solid black" }}>time</th>
-          </tr>
-        </thead>
-        <tbody>
-          {notificationList.map((val, key) => {
-            return (
-              <tr key={key}>
-                <td style={{ border: "1px solid black" }}>
-                  {val.meter_number}
-                </td>
-                <td style={{ border: "1px solid black" }}>{val.message}</td>
-                <td style={{ border: "1px solid black" }}>{val.unit_number}</td>
-                <td style={{ border: "1px solid black" }}>
-                  {val.notification_type}
-                </td>
-                <td style={{ border: "1px solid black" }}>
-                  {val.notification_local_time}
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+      <div>
+        <table className="notiTable">
+          <thead>
+            <tr>
+              <th>Meter Number</th>
+              <th>Message</th>
+              <th>Unit #</th>
+              <th>Notification</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            {notificationList.map((val, key) => {
+              return (
+                <tr key={key}>
+                  <td>{val.meter_number}</td>
+                  <td>{val.message}</td>
+                  <td>{val.unit_number}</td>
+                  <td>{val.notification_type}</td>
+                  <td>{val.notification_local_time}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

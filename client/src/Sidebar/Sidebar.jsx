@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
-import saya from './saya.png';
+import saya from '../assets/saya.png';
 import { useContext } from 'react';
 import { AuthContext } from '../AuthContext';
 
@@ -22,29 +22,31 @@ const Sidebar = () => {
     <div className="sidebar">
       <img src={saya} alt="saya" className="saya" />
       <ul className="nav">
-        <li className='Overview'>
+        <li className="sideBarListItem">
           <Link to="/Dashboard">Overview</Link>
         </li>
-        <li className='Tenants'>
+        <li className="sideBarListItem">
           <Link to="/Tenants">Tenants</Link>
         </li>
-        <li className='Billing'>
+        <li className="sideBarListItem">
           <Link to="/Billing">Billing</Link>
         </li>
-        <li className='Analytics'>
+        <li className="sideBarListItem">
           <Link to="/Analytics">Analytics</Link>
         </li>
-        <li className='Hardware'>
+        <li className="sideBarListItem">
           <Link to="/Hardware">Hardware</Link>
         </li>
-        <li className='Notifications'>
+        <li className="sideBarListItem">
           <Link to="/Notifications">Notifications</Link>
         </li>
-        <hr className="solid"></hr>
-        <li className='Settings'>
+      </ul>
+      <hr className="solid"></hr>
+      <ul className='nav2'>
+        <li className="sideBarListItem">
           <Link to="/Settings">Settings</Link>
         </li>
-        <li className='Logout' >
+        <li className="sideBarListItem">
           <Link to="/" onClick={handleLogout}>Logout</Link>
         </li>
       </ul>
